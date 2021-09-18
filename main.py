@@ -11,9 +11,13 @@ app = Flask(
 def index():
   return render_template('index.html')
 
-@app.route('/process')
+@app.route('/process', methods = ['GET', 'POST'])
 def process():
-  return "processing here"
+  if request.method == 'POST':
+    file = request.files['file']
+    file.save('uploads/' + file.filename)
+    file.close()
+    return file
 
 if __name__ == '__main__':
   app.run(
