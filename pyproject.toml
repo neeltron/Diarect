@@ -8,6 +8,7 @@ authors = ["neeltron <<>>"]
 python = "^3.8"
 SpeechRecognition = "^3.8.1"
 PyAudio = "^0.2.11"
+Flask = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 
