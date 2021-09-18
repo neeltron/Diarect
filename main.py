@@ -7,13 +7,11 @@ app = Flask(
   static_folder='static'
 )
 
-# Index page and Rendering Basic Templates
 @app.route('/')
 def index():
   return render_template('index.html')
 
 if __name__ == '__main__':
-  # Run the Flask app
   app.run(
 	host='0.0.0.0',
 	debug=True,

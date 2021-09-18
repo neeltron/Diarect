@@ -27,16 +27,15 @@
     </style>
   </head>
   <body>
-    <h1>MediaRecorder API</h1>
+    <h1>Diarect</h1>
 
-    <p> For now it is supported only in Firefox(v25+) and Chrome(v47+)</p>
     <div id='gUMArea'>
-      <div>
+      <!-- <div>
       Record:
         <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
         <input type="radio" name="media" value="audio">audio
-      </div>
-      <button class="btn btn-default"  id='gUMbtn'>Request Stream</button>
+      </div> -->
+      <button class="btn btn-default"  id='gUMbtn'>+</button>
     </div>
     <div id='btns'>
       <button  class="btn btn-default" id='start'>Start</button>
@@ -79,7 +78,7 @@ gUMbtn.onclick = e => {
           gUM: {audio: true}
         }
       };
-  media = mv.checked ? mediaOptions.video : mediaOptions.audio;
+  media = mediaOptions.audio;
   navigator.mediaDevices.getUserMedia(media.gUM).then(_stream => {
     stream = _stream;
     id('gUMArea').style.display = 'none';
